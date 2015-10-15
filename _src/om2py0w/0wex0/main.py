@@ -1,47 +1,49 @@
 #-*- coding:utf-8 -*-
+''' 20151015基于42行代码设计一个小游戏-猜数字：
+功能设计：
+1、每次运行游戏（运行main.py）生产一个1-100的随机数
+2、游戏玩家可以通过命令行输入自己猜想的数字，得分规则是：
+     1）猜中的话：得100分
+     2）猜的数字和随机数的差距小于10的话：得90分
+     3）猜的数字和随机数的差距大于10小于20：得80分
+     4）猜的数字和随机数的差距大于20：得70分
+'''
 import os
+import random  #导入生产随机数的包
 
 def foo(param1, secondParam):
-        res = param1 + secondParam
 
-        print '%s 加上 %s 等于：%s' % (param1,secondParam,res)
+        res = 0
+        score = 0
 
-        if res < 50:
-            print '这个foo'
-
-        elif (res >= 50) and ((param1 == 42) or secondParam ==24 ):
-            print '那个bar'
-
+        if param1 > secondParam :
+            res = param1 - secondParam
         else:
-            print '哈哈！'
+            res = secondParam - param1
 
-        return res # 这个是单行注释！
+        if res < 10:
+            score = 90
+        elif res > 10 and res <= 20:
+            score = 80
+        else:
+            score = 70
 
-        ''' 多行注释这样用，
-                多行。。。。'''
+        return score # 这个是单行注释！
+
 
 def main():
-    print 'Hello World!'    #打印hello world！
+    print '哈喽，欢迎来到猜数字游戏!'
 
-    print "这是Alice的问候!"
-    print '这是Bob的问候!'
+    print "我们已经为您生成了一个1-100之间的数字"
 
-    foo(5, 10)
+    randomNumber = random.randint(1,100);
 
-    print '=' * 10
-    print '现在的工作目录是： ' + os.getcwd()
+    inputStr = raw_input("请输入你猜的数字哦：")
+    inputNumber = int(inputStr)
 
-    counter = 0
-    counter += 1
+    print '好的，我们已经检测到您输入是：' + str(inputNumber)
 
-    food = ['apple', 'oranges', 'cat']
-
-    for i in food:
-        print '我喜欢吃： ' + i
-
-    print '数数到10:'
-    for i in range(10):
-        print i
+    print '哈哈，经过我们的检测，您的得分是：' + str(foo(inputNumber, randomNumber))
 
 if __name__ == '__main__':
     main()
