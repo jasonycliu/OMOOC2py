@@ -24,7 +24,9 @@ try:
     else:
         filename = raw_input("请输入保存日志的文件名(如note.txt): ")
 
-    fileobject = open(filename,"a+")  # a+ 表示以追加的模式打开,并且可以读写
+    fileobject = open(filename,'a+')  # a+ 表示以追加的模式打开,并且可以读写
+
+    print "以下是您的日志记录:" + fileobject.read()
 
     #需要循环读取所以使用while循环,通过指定输入某个字符串退出,并保存日志
     while True:
