@@ -16,18 +16,15 @@ CLI 上的持续交互
 MyDailyCLI 私人记事本原型版'''
 
 from sys import argv
-import os
 
 try:
     #如何输入的参数大于1,则是已经创建好文件,需要先读取原来的日志在记录日志.
-    if len(argv) > 1 and argv[1] :
-        fileobject = open(argv[1],'r')
-        print fileobject.read()
-
+    if len(argv) > 1 :
+        filename = argv[1]
     else:
-        filename = raw_input("请输入保存日志的文件名(如note.txt):")
+        filename = raw_input("请输入保存日志的文件名(如note.txt): ")
 
-        fileobject = open(filename,"a+")
+    fileobject = open(filename,"a+")  # a+ 表示以追加的模式打开,并且可以读写
 
     #需要循环读取所以使用while循环,通过指定输入某个字符串退出,并保存日志
     while True:
