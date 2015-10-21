@@ -23,14 +23,20 @@ if command == 'read':
     fileobject = open('diary.txt','r')
     for eachline in fileobject:
         print eachline
-else:
-    fileobject = open('diary.txt','a+')
+    fileobject.close()
     
+elif command == 'write':
+    fileobject = open('diary.txt','a+')
     while True:
         text = raw_input('请输入日志内容,写完输入exit退出:')
         if text != 'exit':
             fileobject.write(time.strftime('%Y/%m/%d %H:%M:%S') + text +'\n')
         else:
             break
+    fileobject.close()
 
-fileobject.close()
+else:
+    print('抱歉,我们没能识别您的指令,系统将退出...')
+
+
+
