@@ -25,5 +25,5 @@
  > import time  
  > time.strftime(%Y/%m/d)
 
-* mac和win下python2 commonline的乱码问题:在mac下显示正常,win显示乱码,还没有想到是什么原因,初步考虑是commonline的输入编码不一样
+* mac和win下python2 commonline的乱码问题:在mac下显示正常,win显示乱码,还没有想到是什么原因,初步考虑是commonline的输入编码不一样.
 
