@@ -1,5 +1,5 @@
-#-*-coding:utf-8-*-
-
+# -*-coding:utf-8 -*-
+import time
 '''交互101：极简交互式日记系统
 *一次接收输入一行日记
 *记录为本地文件
@@ -15,26 +15,22 @@ CLI 上的持续交互
 数据文本 的循环读取
 MyDailyCLI 私人记事本原型版'''
 
-from sys import argv
+print "查看日记请输入read,记录日记请输入write."
 
-try:
-    #如何输入的参数大于1,则是已经创建好文件,需要先读取原来的日志在记录日志.
-    if len(argv) > 1 :
-        filename = argv[1]
-    else:
-        filename = raw_input("请输入保存日志的文件名(如note.txt): ")
+command = raw_input('等待指令中...')
 
-    fileobject = open(filename,'a+')  # a+ 表示以追加的模式打开,并且可以读写
-
-    print "以下是您的日志记录:" + fileobject.read()
-
-    #需要循环读取所以使用while循环,通过指定输入某个字符串退出,并保存日志
+if command == 'read':
+    fileobject = open('diary.txt','r')
+    for eachline in fileobject:
+        print eachline
+else:
+    fileobject = open('diary.txt','a+')
+    
     while True:
-        fileinput = raw_input("请输入日志内容:(输入exit退出) ")
-        if fileinput != 'exit':
-            fileobject.write(fileinput+"\n")
+        text = raw_input('请输入日志内容,写完输入exit退出:')
+        if text != 'exit':
+            fileobject.write(time.strftime('%Y/%m/%d %H:%M:%S') + text +'\n')
         else:
             break
-finally:
-    if fileobject:
-        fileobject.close()
+
+fileobject.close()
