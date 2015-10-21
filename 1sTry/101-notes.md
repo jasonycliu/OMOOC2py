@@ -18,3 +18,13 @@
 2. 需要持续的从命令行中获取用户输入的数据
 3. 需要考虑退出的条件
 4. 中文的问题
+
+
+## 遇到的问题
+* 加入时间: 
+ > import time  
+ > time.strftime(%Y/%m/d)
+
+* mac和win下python2 commonline的乱码问题
+  * 在mac下显示正常,win显示乱码
+
