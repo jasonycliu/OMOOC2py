@@ -1,9 +1,14 @@
-# -*- conding:utf-8 -*-
+ #!/usr/bin/python
+ # -*- coding: utf-8 -*-
+
 from Tkinter import *
-from math import *
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def evaluate(event):
-    inputtext = str(eval(entry.get()))
+    inputtext = str(entry.get())
     outputcontent = readfile() + inputtext + "\n"
     res.configure(text = outputcontent)
     writefile(outputcontent)
@@ -19,7 +24,8 @@ def writefile(outputcontent):
     fileobject.close()
 
 w = Tk()
-Label(w, text="my diary").pack()
+
+Label(w, text="O(∩_∩)O").pack()
 entry = Entry(w)
 entry.bind("<Return>", evaluate)
 entry.pack()
