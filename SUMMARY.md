@@ -4,7 +4,6 @@
 * [教学反转](0MOOC/README.md)
 * [基础旋进](1sTry/README.md)
    * [交互101-极简交互式日记系统](1sTry/101-notes.md)
-       * [交互-GUI 版日记系统](1sTry/gui-101.md)
    * [交互101-GUI版](1sTry/gui.md)
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
