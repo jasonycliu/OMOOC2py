@@ -5,7 +5,7 @@
 * [基础旋进](1sTry/README.md)
    * [作业教程](1sTry/homework.md)
        * [交互101-CLI版日记本软件](.1sTry/101-notes.md/101-notesmd.md)
-       * 交互101-GUI版日记本系统
+       * [交互101-GUI版日记本系统](1sTry/gui-101.md)
    * [交互101-GUI版](.1sTry/gui.md)
        * gui-101
    * 公开课笔记
