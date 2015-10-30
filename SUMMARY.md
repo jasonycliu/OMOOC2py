@@ -8,6 +8,7 @@
        * [交互101-GUI版日记本软件](1sTry/gui.md)
        * 交互101-NET版日记本软件
    * [公开课笔记](1sTry/openmindclassnotes.md)
+       * 2wd4
 * [迭代作品](2nDev/README.md)
 * [人生首秀](3rDemo/README.md)
 * [代码 (_src)](_src/README.md)
