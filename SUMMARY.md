@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [教学反转](0MOOC/README.md)
 * [基础旋进](1sTry/README.md)
-   * 作业教程
+   * [作业教程](1sTry/commonline-101.md)
    * 公开课笔记
 * [交互101-极简交互式日记系统](1sTry/101-notes.md)
 * [交互101-GUI版](1sTry/gui.md)
