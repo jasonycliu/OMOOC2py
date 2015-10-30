@@ -7,6 +7,7 @@
        * [交互101-CLI版日记本软件](.1sTry/101-notes.md/101-notesmd.md)
        * 交互101-GUI版日记本系统
    * [交互101-GUI版](.1sTry/gui.md)
+       * gui-101
    * 公开课笔记
 * [交互101-极简交互式日记系统](1sTry/101-notes.md)
 * [迭代作品](2nDev/README.md)
