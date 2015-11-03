@@ -34,7 +34,7 @@ while True:
 		
 	else:
 		outputtext += '\n' + data
-		with open('mydiary.log','w') as f:
-			f.write(outputtext)
+		#写数据到文件中
+		write(outputtext)
 		s.sendto(outputtext,addr)
 s.close
