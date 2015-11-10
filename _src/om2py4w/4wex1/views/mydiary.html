@@ -16,6 +16,13 @@
     </form>
     <p>
     <h3>以下是日记内容:</h3>
-    <textarea cols=60 rows=20>{{diary}}</textarea>
+    <table align="center">
+    {% for row in diarys %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+        </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>

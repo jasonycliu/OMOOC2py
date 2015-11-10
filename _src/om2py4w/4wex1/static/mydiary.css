@@ -23,3 +23,14 @@ input[type=text]{
     border-color: black;
 }
 
+table, th, td{
+  border:dashed black;
+}
+
+table {
+    width:50%;
+}
+td{
+    padding:15px;
+    text-align: left
+}
