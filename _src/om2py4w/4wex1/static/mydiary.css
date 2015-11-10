@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    font-size: 100
+}
+
+textarea {
+  margin: 0;
+  font: inherit;
+  color: black;
+  border:dashed;
+}
+
+input{
+  color: black
+}
+
+input[type=submit]:hover {
+    background-color:rgba(255,204,0,0.8);
+}
+
+input[type=text]{
+    border: dashed;
+    border-color: black;
+}
+
