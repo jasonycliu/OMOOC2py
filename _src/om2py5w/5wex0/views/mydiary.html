@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/static/bootstrap.min.css" rel="stylesheet">
+<link href="/static/mydiary.css" rel="stylesheet">
+<script type="text/javascript" src="/static/mydiary.js"></script>
+<title>WEB-101</title> </head>
+<body>
+    <h1>WEB-101极简交互日记本</h1>
+    <form id ="myform" action='/' onsubmit="return validate()" method='post'>
+        <span>笔记:</span><input name="diary" type="text"/>
+        <span>标签:</span><input name="tag" type="text"/>
+            <input value="提交" type="submit"/> 
+    </form>
+    <p>
+    <h3>以下是日记内容:</h3>
+    <table align="center">
+    {% for diary in diarys %}
+        <tr>
+            <td>标签</td>
+            <td class='tag'>{{diary['tag']}}</td>
+        </tr>
+        <tr>
+            <td>日记</td>
+            <td class='diary'>{{diary['diary']}}</td>
+        </tr>
+        <tr>
+            <td>时间</td>
+            <td class='time'>{{diary['time']}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
